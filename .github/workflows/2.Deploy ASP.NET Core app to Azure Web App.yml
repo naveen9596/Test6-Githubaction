@@ -1,6 +1,7 @@
 name: Deploy ASP.NET Core app to Azure Web App
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -22,7 +23,7 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment: dev
+    # environment: dev
     steps:
 
       # Checkout the repo
